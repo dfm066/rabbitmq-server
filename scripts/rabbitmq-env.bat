@@ -481,9 +481,9 @@ exit /b
 :filter_path
 REM Ensure ERL_LIBS begins with valid path
 IF "%ERL_LIBS%"=="" (
-    set ERL_LIBS=%~dps1%~n1%~x1
+    set "ERL_LIBS=%~dps1%~n1%~x1"
 ) else (
-    set ERL_LIBS=%ERL_LIBS%;%~dps1%~n1%~x1
+    set "ERL_LIBS=%ERL_LIBS%;%~dps1%~n1%~x1"
 )
 exit /b
 
